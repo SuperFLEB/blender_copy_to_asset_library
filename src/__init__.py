@@ -1,7 +1,7 @@
 from typing import Callable
 import bpy
 from .lib import addon
-from .operator import copy_to_asset_library
+from .operator import copy as copy_to_asset_library
 from .panel import preferences as preferences_panel
 from .menu import file_menu
 
@@ -30,7 +30,7 @@ bl_info = {
 
 
 menus: list[tuple[str, Callable]] = [
-    ("TOPBAR_MT_file", addon.menuitem(file_menu.DestinationMenu))
+    ("TOPBAR_MT_file", addon.menuitem(file_menu.COPYTOASSETLIBRARY_MT_destinations))
 ]
 
 # Registerable modules have a REGISTER_CLASSES list that lists all registerable classes in the module
