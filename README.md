@@ -32,10 +32,13 @@ Before using this for the first time, you might want to check out the settings i
 After that, just go to the File menu (on the top bar), to the "Copy to Asset Library..." menu, and select
 an Asset Library to copy to.
 
-## Caveats
+## Caveats, Known Issues
 
 * This uses the Blender Save As Copy feature to "copy" files, even if they haven't been modified since opening. This
   will cause the file to be saved in the version of Blender you are using, with any extra data that might be added by
   that particular installation. (This is done so features like compression can be done.) This probably won't be any
   issue for most practical workflows (since you'll probably be working on the file in the copy of Blender you're
   using this with anyway), but if this tweaks your edge case, be aware of it.
+* Making the copy may cause the "*" that indicates an unsaved file to disappear. This is likely a side-effect of using
+  the Save As Copy operator, with Blender considering that a "Save". The file you're working in does *not* get saved or
+  saved over, though. This is strictly cosmetic.
